@@ -1,9 +1,10 @@
 // import { Link } from 'react-router-dom'
-import { LogoSubText, LogoText } from 'components/ui/Text'
+import { LogoText } from 'components/ui/Text'
 import { displayFrom } from 'helpers/visibilityClassnames'
 import { useCallback, useMemo, useState } from 'react'
 // import { useLocation } from 'react-router-dom'
 // import Logo from 'icons/Logo'
+import { VNode } from 'preact'
 import RightBlock from 'components/navbar/RightBlock'
 import classnames, {
   alignItems,
@@ -52,11 +53,13 @@ const logoWrapper = classnames(display('flex'), width('w-full'))
 
 export default function ({
   logo,
+  logoText,
   account,
   needNetworkChange,
   getENSName,
 }: {
-  logo: ChildNode
+  logo: VNode
+  logoText: VNode | string
   account: string
   needNetworkChange: boolean
   getENSName: (address: string) => string | undefined
@@ -81,8 +84,11 @@ export default function ({
         <div className={logoContainer}>
           <div className={logoWrapper}>{logo}</div>
           <div className={logoWithVersion}>
-            <LogoText>SealCred</LogoText>
-            <LogoSubText>(ALPHA)</LogoSubText>
+            {typeof logoText === 'string' ? (
+              <LogoText>{logoText}</LogoText>
+            ) : (
+              { logoText }
+            )}
           </div>
         </div>
       </>
