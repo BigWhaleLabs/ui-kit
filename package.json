@@ -11,6 +11,12 @@
     "generate-css-types": "tailwindcss-classnames -o src/classnames/tailwind.ts && prettier --write src/classnames/tailwind.ts",
     "update": "yarn build && rm -r docs && cp -r dist docs && git add . && git commit -m 'update' && git push"
   },
+  "np": {
+    "2fa": false,
+    "tests": false,
+    "cleanup": false,
+    "yarn": false
+  },
   "files": [
     "dist"
   ],
@@ -57,6 +63,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
     "eslint-plugin-valtio": "^0.6.0",
+    "np": "^7.6.2",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "react-scripts": "^5.0.1",
