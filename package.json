@@ -1,5 +1,6 @@
 {
-  "name": "frontend-starter",
+  "name": "@bigwhalelabs/ui-kit",
+  "repository": "https://github.com/BigWhaleLabs/ui-kit",
   "version": "1.0.0",
   "license": "MIT",
   "scripts": {
