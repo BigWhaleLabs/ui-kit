@@ -2814,6 +2814,41 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@bigwhalelabs/ui-kit@workspace:.":
+  version: 0.0.0-use.local
+  resolution: "@bigwhalelabs/ui-kit@workspace:."
+  dependencies:
+    "@preact/preset-vite": ^2.3.0
+    "@types/node": ^18.7.14
+    "@typescript-eslint/eslint-plugin": ^5.36.1
+    "@typescript-eslint/parser": ^5.36.1
+    "@vitejs/plugin-react": ^2.0.1
+    autoprefixer: ^10.4.8
+    cross-env: ^7.0.3
+    eslint: ^8.23.0
+    eslint-config-prettier: ^8.5.0
+    eslint-plugin-import: ^2.26.0
+    eslint-plugin-no-relative-import-paths: ^1.4.0
+    eslint-plugin-prettier: ^4.2.1
+    eslint-plugin-react: ^7.31.5
+    eslint-plugin-react-hooks: ^4.6.0
+    eslint-plugin-sort-imports-es6-autofix: ^0.6.0
+    eslint-plugin-valtio: ^0.6.0
+    postcss: ^8.4.16
+    preact: ^10.10.6
+    prettier: ^2.7.1
+    react-scripts: ^5.0.1
+    rollup-plugin-visualizer: ^5.8.1
+    tailwindcss: ^3.1.8
+    tailwindcss-classnames: ^3.0.6
+    typescript: ^4.8.2
+    unfetch: ^4.2.0
+    valtio: ^1.6.4
+    vite: ^3.0.9
+    vite-tsconfig-paths: ^3.5.0
+  languageName: unknown
+  linkType: soft
+
 "@colors/colors@npm:^1.5.0":
   version: 1.5.0
   resolution: "@colors/colors@npm:1.5.0"
@@ -8016,41 +8051,6 @@ __metadata:
   checksum: 13ea8b08f91e669a64e3ba3a20eb79d7ca5379a81f1ff7f4310d54e2320645503cc0c78daedc93dfb6191287295f6479544a649c64d8e41a1c0fb0c221552346
   languageName: node
   linkType: hard
-
-"frontend-starter@workspace:.":
-  version: 0.0.0-use.local
-  resolution: "frontend-starter@workspace:."
-  dependencies:
-    "@preact/preset-vite": ^2.3.0
-    "@types/node": ^18.7.14
-    "@typescript-eslint/eslint-plugin": ^5.36.1
-    "@typescript-eslint/parser": ^5.36.1
-    "@vitejs/plugin-react": ^2.0.1
-    autoprefixer: ^10.4.8
-    cross-env: ^7.0.3
-    eslint: ^8.23.0
-    eslint-config-prettier: ^8.5.0
-    eslint-plugin-import: ^2.26.0
-    eslint-plugin-no-relative-import-paths: ^1.4.0
-    eslint-plugin-prettier: ^4.2.1
-    eslint-plugin-react: ^7.31.5
-    eslint-plugin-react-hooks: ^4.6.0
-    eslint-plugin-sort-imports-es6-autofix: ^0.6.0
-    eslint-plugin-valtio: ^0.6.0
-    postcss: ^8.4.16
-    preact: ^10.10.6
-    prettier: ^2.7.1
-    react-scripts: ^5.0.1
-    rollup-plugin-visualizer: ^5.8.1
-    tailwindcss: ^3.1.8
-    tailwindcss-classnames: ^3.0.6
-    typescript: ^4.8.2
-    unfetch: ^4.2.0
-    valtio: ^1.6.4
-    vite: ^3.0.9
-    vite-tsconfig-paths: ^3.5.0
-  languageName: unknown
-  linkType: soft
 
 "fs-extra@npm:^10.0.0":
   version: 10.0.0
