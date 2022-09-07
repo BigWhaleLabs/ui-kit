@@ -1,4 +1,4 @@
-import { displayTo } from 'helpers/visibilityClassnames'
+import { displayTo } from '@/helpers/visibilityClassnames'
 import { stroke } from 'classnames/tailwind'
 
 const pathColor = (connected?: boolean) =>

@@ -1,8 +1,8 @@
-import { LogoText } from 'components/ui/Text'
+import { LogoText } from '@/components/ui/Text'
 import { VNode } from 'preact'
-import { displayFrom } from 'helpers/visibilityClassnames'
+import { displayFrom } from '@/helpers/visibilityClassnames'
 import { useCallback, useMemo, useState } from 'react'
-import RightBlock from 'components/navbar/RightBlock'
+import RightBlock from '@/components/navbar/RightBlock'
 import classnames, {
   alignItems,
   backgroundColor,

@@ -1,4 +1,4 @@
-import ChildrenProp from 'models/ChildrenProp'
+import ChildrenProp from '@/models/ChildrenProp'
 
 export default function ({ url, children }: ChildrenProp & { url: string }) {
   return (

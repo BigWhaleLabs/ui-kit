@@ -1,5 +1,5 @@
-import Dropdown from 'components/Dropdown'
-import sealVerseData from 'sealVerseData'
+import Dropdown from '@/components/Dropdown'
+import sealVerseData from '@/sealVerseData'
 
 export default function () {
   return (

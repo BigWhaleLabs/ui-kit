@@ -1,5 +1,5 @@
-import ItemContainer from 'components/Dropdown/ItemContainer'
-import Option from 'components/Dropdown/Option'
+import ItemContainer from '@/components/Dropdown/ItemContainer'
+import Option from '@/components/Dropdown/Option'
 import classnames, {
   backgroundColor,
   borderRadius,

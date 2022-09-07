@@ -1,5 +1,5 @@
-import { RefObject } from 'preact'
-import { useEffect } from 'preact/compat'
+import { RefObject } from 'react'
+import { useEffect } from 'react'
 
 export default function (ref: RefObject<HTMLDivElement>, callback: () => void) {
   useEffect(() => {

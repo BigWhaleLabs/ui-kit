@@ -1,4 +1,4 @@
-import Network from 'models/Network'
+import Network from '@/models/Network'
 
 export default function (address: string, network: Network) {
   return `https://${

@@ -1,14 +1,15 @@
 // vite.config.js
-import { resolve } from 'path'
+import { resolve } from 'node:path'
 import { defineConfig } from 'vite'
-import tsconfigPaths from 'vite-tsconfig-paths'
 import dts from 'vite-plugin-dts'
 import preact from '@preact/preset-vite'
 import VitePluginStyleInject from 'vite-plugin-style-inject'
+import { ViteAliases } from 'vite-aliases'
+import path from 'node:path'
 
 export default defineConfig({
   plugins: [
-    tsconfigPaths(),
+    ViteAliases() as Plugin,
     preact(),
     dts({
       insertTypesEntry: true,
@@ -17,21 +18,18 @@ export default defineConfig({
   ],
   build: {
     lib: {
-      entry: resolve(__dirname, 'src/index.ts'),
-      name: 'ui-kit',
-      // the proper extensions will be added
-      fileName: 'ui-kit',
+      entry: path.resolve(__dirname, 'src/index.ts'),
+      name: 'UIKit',
+      formats: ['es', 'umd'],
+      fileName: (format) => `ui-kit.${format}.js`,
     },
     rollupOptions: {
-      // make sure to externalize deps that shouldn't be bundled
-      // into your library
-      external: ['preact', 'react', 'classnames/tailwind'],
+      external: ['preact', 'react', 'react-dom', 'classnames/tailwind'],
       output: {
-        // Provide global variables to use in the UMD build
-        // for externalized deps
         globals: {
-          react: 'React',
           preact: 'Preact',
+          react: 'React',
+          'react-dom': 'ReactDOM',
         },
       },
     },

@@ -1,4 +1,4 @@
-import { displayFrom } from 'helpers/visibilityClassnames'
+import { displayFrom } from '@/helpers/visibilityClassnames'
 import classnames, {
   borderRadius,
   boxShadow,

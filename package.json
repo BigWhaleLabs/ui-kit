@@ -15,14 +15,14 @@
     "dist"
   ],
   "main": "./dist/ui-kit.umd.js",
-  "module": "./dist/ui-kit.umd.js",
+  "module": "./dist/ui-kit.es.js",
+  "types": "./dist/ui-kit.d.ts",
   "exports": {
     ".": {
-      "import": "./dist/ui-kit.umd.js",
+      "import": "./dist/ui-kit.es.js",
       "require": "./dist/ui-kit.umd.js"
     }
   },
-  "types": "./dist/ui-kit.d.ts",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -39,8 +39,7 @@
     "@vitejs/plugin-react": "^2.0.1",
     "preact": "^10.10.6",
     "react-router-dom": "^6.3.0",
-    "unfetch": "^4.2.0",
-    "valtio": "^1.6.4"
+    "unfetch": "^4.2.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.3.0",
@@ -66,6 +65,7 @@
     "tailwindcss-classnames": "^3.0.6",
     "typescript": "^4.8.2",
     "vite": "^3.0.9",
+    "vite-aliases": "^0.9.2",
     "vite-plugin-dts": "^1.4.1",
     "vite-plugin-style-inject": "^0.0.1",
     "vite-tsconfig-paths": "^3.5.0"

@@ -1,4 +1,4 @@
-import Option from 'components/Dropdown/Option'
+import Option from '@/components/Dropdown/Option'
 
 export default [
   { label: 'SealCred', value: 'https://sealcred.xyz' },

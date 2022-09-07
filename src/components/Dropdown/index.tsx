@@ -1,8 +1,9 @@
-import { createRef } from 'preact'
-import { useState } from 'preact/hooks'
-import Arrow from 'icons/Arrow'
-import Menu from 'components/Dropdown/Menu'
-import Option from 'components/Dropdown/Option'
+import { createRef } from 'react'
+import { displayTo } from '@/helpers/visibilityClassnames'
+import { useState } from 'react'
+import Arrow from '@/icons/Arrow'
+import Menu from '@/components/Dropdown/Menu'
+import Option from '@/components/Dropdown/Option'
 import classnames, {
   alignItems,
   backgroundClip,
@@ -19,7 +20,7 @@ import classnames, {
   textColor,
   width,
 } from 'classnames/tailwind'
-import useClickOutside from 'hooks/useClickOutside'
+import useClickOutside from '@/hooks/useClickOutside'
 
 const gradientText = classnames(
   textColor('text-transparent'),
@@ -40,17 +41,19 @@ const button = classnames(
   gap('gap-x-2'),
   opacity('disabled:opacity-30')
 )
-const container = classnames(
-  position('relative'),
-  width('w-full'),
-  margin('my-2')
-)
+const container = (displayBeforeMd?: boolean) =>
+  classnames(
+    position('relative'),
+    margin('my-2'),
+    displayBeforeMd ? displayTo('md') : undefined
+  )
 
 export default function ({
   disabled,
   currentValue,
   options,
   onChange,
+  displayBeforeMd,
   staticPlaceholder,
   fitToItemSize,
   colorfulCurrentValue,
@@ -62,6 +65,7 @@ export default function ({
   staticPlaceholder?: string
   fitToItemSize?: boolean
   colorfulCurrentValue?: boolean
+  displayBeforeMd?: boolean
 }) {
   const [open, setOpen] = useState(false)
   const ref = createRef<HTMLDivElement>()
@@ -84,7 +88,7 @@ export default function ({
   )
 
   return (
-    <div className={container} ref={ref}>
+    <div className={container(displayBeforeMd)} ref={ref}>
       {selectedElement}
       <Menu
         open={open}

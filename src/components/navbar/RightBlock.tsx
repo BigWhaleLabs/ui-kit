@@ -1,11 +1,11 @@
-import { SocialLink } from 'components/ui/Text'
-import { displayFrom } from 'helpers/visibilityClassnames'
-import AccountAndLogo from 'components/navbar/AccountAndLogo'
-import Discord from 'icons/Discord'
-import ExternalLink from 'components/ui/ExternalLink'
-import Network from 'models/Network'
-import SealVerse from 'components/navbar/SealVerse'
-import Twitter from 'icons/Twitter'
+import { SocialLink } from '@/components/ui/Text'
+import { displayFrom } from '@/helpers/visibilityClassnames'
+import AccountAndLogo from '@/components/navbar/AccountAndLogo'
+import Discord from '@/icons/Discord'
+import ExternalLink from '@/components/ui/ExternalLink'
+import Network from '@/models/Network'
+import SealVerse from '@/components/navbar/SealVerse'
+import Twitter from '@/icons/Twitter'
 import classnames, {
   alignItems,
   backgroundColor,
@@ -18,7 +18,7 @@ import classnames, {
   space,
   width,
 } from 'classnames/tailwind'
-import getEtherscanAddressUrl from 'helpers/network/getEtherscanAddressUrl'
+import getEtherscanAddressUrl from '@/helpers/network/getEtherscanAddressUrl'
 
 const walletContainer = classnames(
   display('flex'),

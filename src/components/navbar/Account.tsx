@@ -1,6 +1,6 @@
-import { AccentText } from 'components/ui/Text'
-import ENSAddress from 'components/ui/ENSAddress'
-import Network from 'models/Network'
+import { AccentText } from '@/components/ui/Text'
+import ENSAddress from '@/components/ui/ENSAddress'
+import Network from '@/models/Network'
 
 export default function ({
   account,
