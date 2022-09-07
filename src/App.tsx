@@ -130,7 +130,7 @@ export default function () {
         logo={WeirdTriangles}
         account={undefined}
         needNetworkChange={false}
-        getENSName={(address) => undefined}
+        getENSName={() => undefined}
         logoText="SealCaster"
       />
     </Root>
