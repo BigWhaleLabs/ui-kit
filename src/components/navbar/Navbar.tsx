@@ -60,7 +60,7 @@ export default function ({
 }: {
   logo: VNode
   logoText: VNode | string
-  account: string
+  account?: string
   needNetworkChange: boolean
   getENSName: (address: string) => string | undefined
 }) {

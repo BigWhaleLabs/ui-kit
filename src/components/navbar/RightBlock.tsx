@@ -88,7 +88,7 @@ export default function ({
   needNetworkChange,
   getENSName,
 }: {
-  account: string
+  account?: string
   needNetworkChange: boolean
   getENSName: (address: string) => string | undefined
 }) {
