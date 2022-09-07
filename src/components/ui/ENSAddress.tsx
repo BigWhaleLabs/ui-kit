@@ -10,14 +10,6 @@ interface ENSAddressProps {
   getENSName: (address: string) => string | undefined
 }
 
-// function getENSName(address: string) {
-//   const { eNSNames } = useSnapshot(ENSStore.networks[network])
-//   const ensName = eNSNames[address]
-
-//   if (!ensName) ENSStore.networks[network].fetchENSName(address)
-//   return ensName
-// }
-
 function ENSAddressSuspended({
   address,
   truncate,

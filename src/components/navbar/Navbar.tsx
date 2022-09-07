@@ -1,10 +1,7 @@
-// import { Link } from 'react-router-dom'
 import { LogoText } from 'components/ui/Text'
+import { VNode } from 'preact'
 import { displayFrom } from 'helpers/visibilityClassnames'
 import { useCallback, useMemo, useState } from 'react'
-// import { useLocation } from 'react-router-dom'
-// import Logo from 'icons/Logo'
-import { VNode } from 'preact'
 import RightBlock from 'components/navbar/RightBlock'
 import classnames, {
   alignItems,
@@ -57,18 +54,15 @@ export default function ({
   account,
   needNetworkChange,
   getENSName,
+  hideWalletPart,
 }: {
   logo: VNode
   logoText: VNode | string
   account?: string
   needNetworkChange: boolean
   getENSName: (address: string) => string | undefined
+  hideWalletPart?: boolean
 }) {
-  // const { pathname } = useLocation()
-  // const withoutRightBlock = pathname.split('/').length >= 3
-
-  const withoutRightBlock = false
-
   const [backgroundVisible, setBackgroundVisible] = useState(false)
   const onScroll = useCallback(() => {
     setBackgroundVisible(window.scrollY > 20)
@@ -79,7 +73,7 @@ export default function ({
   }, [onScroll])
 
   return (
-    <nav className={navbar(backgroundVisible, withoutRightBlock)}>
+    <nav className={navbar(backgroundVisible, hideWalletPart)}>
       <>
         <div className={logoContainer}>
           <div className={logoWrapper}>{logo}</div>
@@ -92,7 +86,7 @@ export default function ({
           </div>
         </div>
       </>
-      {!withoutRightBlock && (
+      {!hideWalletPart && (
         <RightBlock
           getENSName={getENSName}
           needNetworkChange={needNetworkChange}
