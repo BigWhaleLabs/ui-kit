@@ -1,18 +1,39 @@
-import { defineConfig, Plugin } from 'vite'
-import preact from '@preact/preset-vite'
+// vite.config.js
+import { resolve } from 'path'
+import { defineConfig } from 'vite'
 import tsconfigPaths from 'vite-tsconfig-paths'
-import { visualizer } from 'rollup-plugin-visualizer'
+import dts from 'vite-plugin-dts'
+import preact from '@preact/preset-vite'
+import VitePluginStyleInject from 'vite-plugin-style-inject'
 
 export default defineConfig({
-  plugins: [preact(), tsconfigPaths()],
+  plugins: [
+    tsconfigPaths(),
+    preact(),
+    dts({
+      insertTypesEntry: true,
+    }),
+    VitePluginStyleInject(),
+  ],
   build: {
+    lib: {
+      entry: resolve(__dirname, 'src/index.ts'),
+      name: 'ui-kit',
+      // the proper extensions will be added
+      fileName: 'ui-kit',
+    },
     rollupOptions: {
-      plugins: [
-        visualizer({
-          gzipSize: true,
-          brotliSize: true,
-        }) as Plugin,
-      ],
+      // make sure to externalize deps that shouldn't be bundled
+      // into your library
+      external: ['preact', 'react', 'classnames/tailwind'],
+      output: {
+        // Provide global variables to use in the UMD build
+        // for externalized deps
+        globals: {
+          react: 'React',
+          preact: 'Preact',
+        },
+      },
     },
   },
 })

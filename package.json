@@ -11,6 +11,18 @@
     "generate-css-types": "tailwindcss-classnames -o src/classnames/tailwind.ts && prettier --write src/classnames/tailwind.ts",
     "update": "yarn build && rm -r docs && cp -r dist docs && git add . && git commit -m 'update' && git push"
   },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/ui-kit.umd.js",
+  "module": "./dist/ui-kit.umd.js",
+  "exports": {
+    ".": {
+      "import": "./dist/ui-kit.umd.js",
+      "require": "./dist/ui-kit.umd.js"
+    }
+  },
+  "types": "./dist/ui-kit.d.ts",
   "browserslist": {
     "production": [
       ">0.2%",
@@ -54,6 +66,8 @@
     "tailwindcss-classnames": "^3.0.6",
     "typescript": "^4.8.2",
     "vite": "^3.0.9",
+    "vite-plugin-dts": "^1.4.1",
+    "vite-plugin-style-inject": "^0.0.1",
     "vite-tsconfig-paths": "^3.5.0"
   },
   "packageManager": "yarn@3.2.3"
