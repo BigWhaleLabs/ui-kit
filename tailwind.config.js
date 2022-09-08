@@ -52,8 +52,6 @@ module.exports = {
         xs: '22.6rem',
         sm: '28.125rem',
         md: '37.5rem',
-        md700: '43.75rem',
-        tablet: '55.4rem',
         smToXl: { min: '28.125rem', max: '80rem' },
       },
       borderWidth: {

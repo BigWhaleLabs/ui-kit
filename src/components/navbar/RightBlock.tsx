@@ -45,7 +45,7 @@ const delimiterContainer = classnames(
   height('h-4')
 )
 const lastDelimiterContainer = classnames(delimiterContainer, displayFrom('xs'))
-const socialLinksContainer = classnames(displayFrom('md700'), socialContainer)
+const socialLinksContainer = classnames(socialContainer)
 
 const AccountContainer = ({
   account,
