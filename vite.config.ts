@@ -28,6 +28,7 @@ export default defineConfig({
           preact: 'Preact',
           react: 'React',
           'react-dom': 'ReactDOM',
+          'classnames/tailwind': 'tailwind-classnames',
         },
       },
     },
