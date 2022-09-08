@@ -12,11 +12,13 @@ export default function ({
   connected,
   needNetworkChange,
   getENSName,
+  noWalletText,
 }: {
   account?: string
   needNetworkChange: boolean
   connected: boolean
   getENSName: (address: string) => undefined | string
+  noWalletText?: string
 }) {
   return (
     <>
@@ -25,6 +27,7 @@ export default function ({
           getENSName={getENSName}
           account={account}
           needNetworkChange={needNetworkChange}
+          noWalletText={noWalletText}
         />
       </div>
       <div className={width('w-fit')}>

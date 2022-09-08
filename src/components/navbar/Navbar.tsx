@@ -55,6 +55,7 @@ export default function ({
   needNetworkChange,
   getENSName,
   hideWalletPart,
+  noWalletText,
 }: {
   logo: VNode
   logoText: VNode | string
@@ -62,6 +63,7 @@ export default function ({
   needNetworkChange: boolean
   getENSName: (address: string) => string | undefined
   hideWalletPart?: boolean
+  noWalletText?: string
 }) {
   const [backgroundVisible, setBackgroundVisible] = useState(false)
   const onScroll = useCallback(() => {
@@ -91,6 +93,7 @@ export default function ({
           getENSName={getENSName}
           needNetworkChange={needNetworkChange}
           account={account}
+          noWalletText={noWalletText}
         />
       )}
     </nav>

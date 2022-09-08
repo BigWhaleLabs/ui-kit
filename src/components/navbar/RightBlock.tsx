@@ -52,11 +52,13 @@ const AccountContainer = ({
   onChangeNetwork,
   needNetworkChange,
   getENSName,
+  noWalletText,
 }: {
   account?: string
   onChangeNetwork?: () => Promise<void>
   needNetworkChange: boolean
   getENSName: (address: string) => string | undefined
+  noWalletText?: string
 }) => {
   if (account)
     return (
@@ -67,6 +69,7 @@ const AccountContainer = ({
             account={account}
             getENSName={getENSName}
             connected={true}
+            noWalletText={noWalletText}
           />
         </div>
       </ExternalLink>
@@ -87,10 +90,12 @@ export default function ({
   account,
   needNetworkChange,
   getENSName,
+  noWalletText,
 }: {
   account?: string
   needNetworkChange: boolean
   getENSName: (address: string) => string | undefined
+  noWalletText?: string
 }) {
   return (
     <div className={walletContainer}>
@@ -110,6 +115,7 @@ export default function ({
         getENSName={getENSName}
         needNetworkChange={needNetworkChange}
         account={account}
+        noWalletText={noWalletText}
       />
     </div>
   )

@@ -6,13 +6,19 @@ export default function ({
   account,
   needNetworkChange,
   getENSName,
+  noWalletText = 'No wallet',
 }: {
   account?: string
   needNetworkChange: boolean
   getENSName: (address: string) => string | undefined
+  noWalletText?: string
 }) {
   const NotConnected = () =>
-    needNetworkChange ? <span>Change network</span> : <span>No wallet</span>
+    needNetworkChange ? (
+      <span>Change network</span>
+    ) : (
+      <span>{noWalletText}</span>
+    )
 
   return (
     <AccentText
