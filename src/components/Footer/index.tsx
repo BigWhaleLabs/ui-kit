@@ -37,7 +37,7 @@ export default function ({
         {Children.map(links, (link, index) => (
           <>
             {link}
-            {index !== links.length && <Delimiter color={delimiterColor} />}
+            {index !== links.length - 1 && <Delimiter color={delimiterColor} />}
           </>
         ))}
       </div>
