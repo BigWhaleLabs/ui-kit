@@ -53,7 +53,7 @@ export default function ({
   logoText,
   account,
   needNetworkChange,
-  getENSName,
+  eNSName,
   hideWalletPart,
   noWalletText,
 }: {
@@ -61,7 +61,7 @@ export default function ({
   logoText: VNode | string
   account?: string
   needNetworkChange: boolean
-  getENSName: (address: string) => string | undefined
+  eNSName?: string
   hideWalletPart?: boolean
   noWalletText?: string
 }) {
@@ -90,7 +90,7 @@ export default function ({
       </>
       {!hideWalletPart && (
         <RightBlock
-          getENSName={getENSName}
+          eNSName={eNSName}
           needNetworkChange={needNetworkChange}
           account={account}
           noWalletText={noWalletText}

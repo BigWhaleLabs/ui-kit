@@ -51,13 +51,13 @@ const AccountContainer = ({
   account,
   onChangeNetwork,
   needNetworkChange,
-  getENSName,
+  eNSName,
   noWalletText,
 }: {
   account?: string
   onChangeNetwork?: () => Promise<void>
   needNetworkChange: boolean
-  getENSName: (address: string) => string | undefined
+  eNSName?: string
   noWalletText?: string
 }) => {
   if (account)
@@ -67,7 +67,7 @@ const AccountContainer = ({
           <AccountAndLogo
             needNetworkChange={needNetworkChange}
             account={account}
-            getENSName={getENSName}
+            eNSName={eNSName}
             connected={true}
             noWalletText={noWalletText}
           />
@@ -78,7 +78,7 @@ const AccountContainer = ({
   return (
     <div className={accountLinkContainer} onClick={onChangeNetwork}>
       <AccountAndLogo
-        getENSName={getENSName}
+        eNSName={eNSName}
         needNetworkChange={needNetworkChange}
         connected={false}
         noWalletText={noWalletText}
@@ -90,12 +90,12 @@ const AccountContainer = ({
 export default function ({
   account,
   needNetworkChange,
-  getENSName,
+  eNSName,
   noWalletText,
 }: {
   account?: string
   needNetworkChange: boolean
-  getENSName: (address: string) => string | undefined
+  eNSName?: string
   noWalletText?: string
 }) {
   return (
@@ -113,7 +113,7 @@ export default function ({
       <hr className={lastDelimiterContainer} />
 
       <AccountContainer
-        getENSName={getENSName}
+        eNSName={eNSName}
         needNetworkChange={needNetworkChange}
         account={account}
         noWalletText={noWalletText}
