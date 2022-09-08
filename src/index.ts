@@ -2,9 +2,11 @@ import '@/index.css'
 import * as Text from '@/components/ui/Text'
 import { displayFrom, displayTo } from '@/helpers/visibilityClassnames'
 import Button from '@/components/ui/Button'
+import Card from '@/components/ui/Card'
 import Delimiter from '@/components/ui/Delimiter'
 import Dropdown from '@/components/Dropdown'
 import Footer from '@/components/Footer'
+import FooterBlog from '@/components/Footer/FooterBlog'
 import GradientBorder from '@/components/ui/GradientBorder'
 import Navbar from '@/components/navbar/Navbar'
 import classNamesToString from '@/helpers/classNamesToString'
@@ -24,4 +26,6 @@ export {
   useClickOutside,
   GradientBorder,
   Button,
+  FooterBlog,
+  Card,
 }

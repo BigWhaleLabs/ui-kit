@@ -79,6 +79,8 @@ module.exports = {
         'primary-background': 'var(--primary-background)',
         'primary-dark-red': 'var(--primary-dark-red)',
         'secondary-dimmed': 'var(--secondary-dimmed)',
+        'light-grey': 'var(--light-grey)',
+        'half-grey': 'var(--half-grey)',
 
         'accent-light-transparent': 'var(--accent-light-transparent)',
         'accent-light-active-transparent':
