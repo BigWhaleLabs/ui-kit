@@ -3,6 +3,7 @@ import { VNode } from 'preact'
 import Delimiter from '@/components/ui/Delimiter'
 import SocialLinksContainer from '@/components/Footer/SocialLinksContainer'
 import classnames, {
+  TTextColor,
   alignItems,
   display,
   flexDirection,
@@ -23,14 +24,20 @@ const linkContainer = classnames(
   gap('gap-y-2', 'md:gap-y-0', 'md:gap-x-4')
 )
 
-export default function ({ links }: { links: VNode[] }) {
+export default function ({
+  links,
+  delimiterColor,
+}: {
+  links: VNode[]
+  delimiterColor?: TTextColor
+}) {
   return (
     <div className={socialContainerCard}>
       <div className={linkContainer}>
         {Children.map(links, (link, index) => (
           <>
             {link}
-            {index !== links.length && <Delimiter />}
+            {index !== links.length && <Delimiter color={delimiterColor} />}
           </>
         ))}
       </div>
