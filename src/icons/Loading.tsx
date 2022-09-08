@@ -3,7 +3,6 @@ import {
   classnames,
   height,
   inset,
-  opacity,
   position,
   textColor,
   width,
