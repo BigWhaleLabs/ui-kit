@@ -1,5 +1,4 @@
 import { createRef } from 'react'
-import { displayTo } from '@/helpers/visibilityClassnames'
 import { useState } from 'react'
 import Arrow from '@/icons/Arrow'
 import Menu from '@/components/Dropdown/Menu'
@@ -41,19 +40,13 @@ const button = classnames(
   gap('gap-x-2'),
   opacity('disabled:opacity-30')
 )
-const container = (displayBeforeMd?: boolean) =>
-  classnames(
-    position('relative'),
-    margin('my-2'),
-    displayBeforeMd ? displayTo('md') : undefined
-  )
+const container = classnames(position('relative'), margin('my-2'))
 
 export default function ({
   disabled,
   currentValue,
   options,
   onChange,
-  displayBeforeMd,
   staticPlaceholder,
   fitToItemSize,
   colorfulCurrentValue,
@@ -65,7 +58,6 @@ export default function ({
   staticPlaceholder?: string
   fitToItemSize?: boolean
   colorfulCurrentValue?: boolean
-  displayBeforeMd?: boolean
 }) {
   const [open, setOpen] = useState(false)
   const ref = createRef<HTMLDivElement>()
@@ -88,7 +80,7 @@ export default function ({
   )
 
   return (
-    <div className={container(displayBeforeMd)} ref={ref}>
+    <div className={container} ref={ref}>
       {selectedElement}
       <Menu
         open={open}
