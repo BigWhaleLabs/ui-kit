@@ -1,4 +1,4 @@
-import classnames, { fill, stroke, strokeWidth } from 'classnames/tailwind'
+import classnames, { fill, stroke, strokeWidth } from '@/classnames/tailwind'
 
 const circle = classnames(
   fill('fill-primary-dark'),

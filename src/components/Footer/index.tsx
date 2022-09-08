@@ -9,7 +9,7 @@ import classnames, {
   justifyContent,
   padding,
   space,
-} from 'classnames/tailwind'
+} from '@/classnames/tailwind'
 
 const commonClasses = classnames(display('flex'), alignItems('items-center'))
 const socialContainerCard = classnames(

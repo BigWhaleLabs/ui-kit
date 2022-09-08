@@ -8,7 +8,7 @@ import classnames, {
   display,
   flexDirection,
   gap,
-} from 'classnames/tailwind'
+} from '@/classnames/tailwind'
 
 const socialContainer = classnames(
   display('flex'),
