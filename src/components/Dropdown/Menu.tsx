@@ -5,7 +5,6 @@ import classnames, {
   borderRadius,
   cursor,
   inset,
-  minWidth,
   opacity,
   padding,
   position,
@@ -45,8 +44,7 @@ const menuItem = (selected?: boolean, fitToItemSize?: boolean) =>
     textAlign('text-left'),
     opacity('disabled:opacity-30'),
     transitionProperty('transition-colors'),
-    width({ 'w-full': fitToItemSize }),
-    minWidth({ 'min-w-max': fitToItemSize })
+    width({ 'w-full': fitToItemSize })
   )
 
 export default function ({
