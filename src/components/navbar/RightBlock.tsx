@@ -17,7 +17,7 @@ import classnames, {
   height,
   space,
   width,
-} from 'classnames/tailwind'
+} from '@/classnames/tailwind'
 import getEtherscanAddressUrl from '@/helpers/network/getEtherscanAddressUrl'
 
 const walletContainer = classnames(

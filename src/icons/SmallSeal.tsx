@@ -1,5 +1,5 @@
 import { displayTo } from '@/helpers/visibilityClassnames'
-import { stroke } from 'classnames/tailwind'
+import { stroke } from '@/classnames/tailwind'
 
 const pathColor = (connected?: boolean) =>
   stroke(connected ? 'stroke-secondary' : 'stroke-primary-semi-dimmed')

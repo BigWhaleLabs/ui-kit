@@ -22,13 +22,13 @@ export default defineConfig({
       fileName: (format) => `ui-kit.${format}.js`,
     },
     rollupOptions: {
-      external: ['preact', 'react', 'react-dom', 'classnames/tailwind'],
+      external: ['preact', 'react', 'react-dom', 'tailwindcss-classnames'],
       output: {
         globals: {
           preact: 'Preact',
           react: 'React',
           'react-dom': 'ReactDOM',
-          'classnames/tailwind': 'tailwind-classnames',
+          'tailwindcss-classnames': 'tailwind-classnames',
         },
       },
     },

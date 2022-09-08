@@ -1,6 +1,6 @@
 import Account from '@/components/navbar/Account'
 import Logo from '@/components/navbar/Logo'
-import classnames, { lineHeight, textAlign, width } from 'classnames/tailwind'
+import classnames, { lineHeight, textAlign, width } from '@/classnames/tailwind'
 
 const walletAccount = classnames(
   textAlign('text-right'),

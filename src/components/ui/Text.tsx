@@ -19,7 +19,7 @@ import {
   textTransform,
   transitionProperty,
   width,
-} from 'classnames/tailwind'
+} from '@/classnames/tailwind'
 import ChildrenProp from '@/models/ChildrenProp'
 import Color from '@/models/Color'
 import classNamesToString from '@/helpers/classNamesToString'

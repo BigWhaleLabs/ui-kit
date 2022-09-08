@@ -1,4 +1,4 @@
-import { textColor } from 'classnames/tailwind'
+import { textColor } from '@/classnames/tailwind'
 import Color from '@/models/Color'
 
 export default function (color: Color) {

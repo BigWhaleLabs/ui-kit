@@ -1,4 +1,4 @@
-import { TTailwindString } from 'classnames/tailwind'
+import { TTailwindString } from '@/classnames/tailwind'
 
 type AllowedExtraClassnames = 'hover-tertiary'
 

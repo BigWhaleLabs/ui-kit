@@ -17,7 +17,7 @@ import classnames, {
   transitionProperty,
   width,
   zIndex,
-} from 'classnames/tailwind'
+} from '@/classnames/tailwind'
 
 const navbar = (visible?: boolean, withoutRightBlock?: boolean) =>
   classnames(

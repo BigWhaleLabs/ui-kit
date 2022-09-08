@@ -14,7 +14,7 @@ import classnames, {
   overflow,
   padding,
   transitionProperty,
-} from 'classnames/tailwind'
+} from '@/classnames/tailwind'
 
 export const boxStyles = classnames(
   display('flex'),

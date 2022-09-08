@@ -5,7 +5,7 @@ import classnames, {
   rotate,
   transitionDuration,
   width,
-} from 'classnames/tailwind'
+} from '@/classnames/tailwind'
 
 const arrowAnimation = (
   pulseDisabled?: boolean,

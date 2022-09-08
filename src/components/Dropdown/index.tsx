@@ -19,7 +19,7 @@ import classnames, {
   position,
   textColor,
   width,
-} from 'classnames/tailwind'
+} from '@/classnames/tailwind'
 import useClickOutside from '@/hooks/useClickOutside'
 
 const gradientText = classnames(

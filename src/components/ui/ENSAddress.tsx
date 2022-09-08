@@ -1,5 +1,5 @@
 import { Suspense, memo } from 'react'
-import { display } from 'classnames/tailwind'
+import { display } from '@/classnames/tailwind'
 import { displayFrom, displayTo } from '@/helpers/visibilityClassnames'
 import Network from '@/models/Network'
 import truncateMiddleIfNeeded from '@/helpers/network/truncateMiddleIfNeeded'
