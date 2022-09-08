@@ -1,3 +1,4 @@
+import Footer from '@/components/Footer'
 import Navbar from '@/components/navbar/Navbar'
 
 export default function () {
@@ -10,6 +11,7 @@ export default function () {
         logoText="SealCaster"
         noWalletText={'Connect burner wallet'}
       />
+      <Footer />
     </div>
   )
 }
