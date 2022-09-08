@@ -1,7 +1,7 @@
 {
   "name": "@big-whale-labs/ui-kit",
   "repository": "https://github.com/BigWhaleLabs/ui-kit",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "license": "MIT",
   "scripts": {
     "start": "yarn generate-css-types && vite",
