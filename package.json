@@ -1,7 +1,7 @@
 {
-  "name": "@bigwhalelabs/ui-kit",
+  "name": "@big-whale-labs/ui-kit",
   "repository": "https://github.com/BigWhaleLabs/ui-kit",
-  "version": "1.0.0",
+  "version": "1.0.11",
   "license": "MIT",
   "scripts": {
     "start": "yarn generate-css-types && vite",
@@ -10,6 +10,24 @@
     "lint": "yarn pretty && eslint --max-warnings 0 --ext ts,tsx,json src",
     "generate-css-types": "tailwindcss-classnames -o src/classnames/tailwind.ts && prettier --write src/classnames/tailwind.ts",
     "update": "yarn build && rm -r docs && cp -r dist docs && git add . && git commit -m 'update' && git push"
+  },
+  "np": {
+    "2fa": false,
+    "tests": false,
+    "cleanup": false,
+    "yarn": false
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/ui-kit.umd.js",
+  "module": "./dist/ui-kit.es.js",
+  "types": "./dist/ui-kit.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/ui-kit.es.js",
+      "require": "./dist/ui-kit.umd.js"
+    }
   },
   "browserslist": {
     "production": [
@@ -26,8 +44,8 @@
   "dependencies": {
     "@vitejs/plugin-react": "^2.0.1",
     "preact": "^10.10.6",
-    "unfetch": "^4.2.0",
-    "valtio": "^1.6.4"
+    "react-router-dom": "^6.3.0",
+    "unfetch": "^4.2.0"
   },
   "devDependencies": {
     "@preact/preset-vite": "^2.3.0",
@@ -45,6 +63,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-plugin-sort-imports-es6-autofix": "^0.6.0",
     "eslint-plugin-valtio": "^0.6.0",
+    "np": "^7.6.2",
     "postcss": "^8.4.16",
     "prettier": "^2.7.1",
     "react-scripts": "^5.0.1",
@@ -53,6 +72,9 @@
     "tailwindcss-classnames": "^3.0.6",
     "typescript": "^4.8.2",
     "vite": "^3.0.9",
+    "vite-aliases": "^0.9.2",
+    "vite-plugin-dts": "^1.4.1",
+    "vite-plugin-style-inject": "^0.0.1",
     "vite-tsconfig-paths": "^3.5.0"
   },
   "packageManager": "yarn@3.2.3"
