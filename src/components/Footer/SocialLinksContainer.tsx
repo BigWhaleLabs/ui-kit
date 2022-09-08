@@ -1,8 +1,8 @@
-import { SocialLink } from 'components/ui/Text'
-import { displayTo } from 'helpers/visibilityClassnames'
-import Delimiter from 'components/ui/Delimiter'
-import Discord from 'icons/Discord'
-import Twitter from 'icons/Twitter'
+import { SocialLink } from '@/components/ui/Text'
+import { displayTo } from '@/helpers/visibilityClassnames'
+import Delimiter from '@/components/ui/Delimiter'
+import Discord from '@/icons/Discord'
+import Twitter from '@/icons/Twitter'
 import classnames, {
   alignItems,
   display,

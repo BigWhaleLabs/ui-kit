@@ -1,7 +1,7 @@
-import { FooterLink } from 'components/ui/Text'
-import Delimiter from 'components/ui/Delimiter'
-import SC from 'icons/SC'
-import SocialLinksContainer from 'components/Footer/SocialLinksContainer'
+import { FooterLink } from '@/components/ui/Text'
+import Delimiter from '@/components/ui/Delimiter'
+import SC from '@/icons/SC'
+import SocialLinksContainer from '@/components/Footer/SocialLinksContainer'
 import classnames, {
   alignItems,
   display,
