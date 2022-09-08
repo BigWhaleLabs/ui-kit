@@ -1,4 +1,4 @@
-import { NavLink } from 'react-router-dom'
+import { Link } from 'wouter'
 import {
   TDropShadow,
   TGradientColorStops,
@@ -263,12 +263,9 @@ export function LinkText({
   gradientTo?: TGradientColorStops
 }) {
   return internal ? (
-    <NavLink
-      to={url}
-      className={linkText(bold, color, gradientFrom, gradientTo)}
-    >
+    <Link to={url} className={linkText(bold, color, gradientFrom, gradientTo)}>
       {children}
-    </NavLink>
+    </Link>
   ) : (
     <a
       className={linkText(bold, color, gradientFrom, gradientTo)}
@@ -299,13 +296,13 @@ export function FooterLink({
   internal,
 }: ChildrenProp & { url: string; internal?: boolean }) {
   return internal ? (
-    <NavLink
+    <Link
       replace
       to={url}
       className={({ isActive }: { isActive?: boolean }) => footerLink(isActive)}
     >
       {children}
-    </NavLink>
+    </Link>
   ) : (
     <a
       className={footerLink()}

@@ -1,14 +1,14 @@
-import { FooterLink } from '@/components/ui/Text'
+import { Children } from 'preact/compat'
+import { VNode } from 'preact'
 import Delimiter from '@/components/ui/Delimiter'
-import SC from '@/icons/SC'
 import SocialLinksContainer from '@/components/Footer/SocialLinksContainer'
 import classnames, {
+  TTextColor,
   alignItems,
   display,
   flexDirection,
-  justifyContent,
+  gap,
   padding,
-  space,
 } from '@/classnames/tailwind'
 
 const commonClasses = classnames(display('flex'), alignItems('items-center'))
@@ -16,38 +16,30 @@ const socialContainerCard = classnames(
   commonClasses,
   flexDirection('flex-col', 'md:flex-row'),
   padding('py-4', 'px-4', 'lg:px-25'),
-  space('space-y-4', 'md:space-x-4', 'md:space-y-0')
+  gap('gap-y-4', 'md:gap-x-4', 'md:gap-y-0')
 )
 const linkContainer = classnames(
   commonClasses,
   flexDirection('flex-col', 'md:flex-row'),
-  space('space-y-2', 'md:space-y-0', 'md:space-x-4')
-)
-const footerLogo = classnames(
-  commonClasses,
-  justifyContent('justify-center'),
-  flexDirection('flex-row'),
-  space('space-x-4')
+  gap('gap-y-2', 'md:gap-y-0', 'md:gap-x-4')
 )
 
-export default function () {
+export default function ({
+  links,
+  delimiterColor,
+}: {
+  links: VNode[]
+  delimiterColor?: TTextColor
+}) {
   return (
     <div className={socialContainerCard}>
       <div className={linkContainer}>
-        <FooterLink url="https://blog.bigwhalelabs.com/">
-          <div className={footerLogo}>
-            <SC />
-            <span>Blog</span>
-          </div>
-        </FooterLink>
-        <Delimiter />
-        <FooterLink internal url="/terms">
-          Terms of service
-        </FooterLink>
-        <Delimiter />
-        <FooterLink internal url="/privacy">
-          Privacy policy
-        </FooterLink>
+        {Children.map(links, (link, index) => (
+          <>
+            {link}
+            {index !== links.length - 1 && <Delimiter color={delimiterColor} />}
+          </>
+        ))}
       </div>
       <SocialLinksContainer />
     </div>
