@@ -17,7 +17,7 @@ import classnames, {
   transitionProperty,
   width,
   zIndex,
-} from 'classnames/tailwind'
+} from '@/classnames/tailwind'
 
 const navbar = (visible?: boolean, withoutRightBlock?: boolean) =>
   classnames(
@@ -26,7 +26,7 @@ const navbar = (visible?: boolean, withoutRightBlock?: boolean) =>
     display('flex'),
     alignItems('items-center'),
     justifyContent(withoutRightBlock ? 'sm:justify-center' : 'justify-between'),
-    padding('py-4', 'px-4', 'sm:px-8', '2xl:!px-25'),
+    padding('py-4', 'px-4'),
     space('xs:space-x-4', 'sm:space-x-9', 'lg:space-x-0'),
     zIndex('z-50'),
     backgroundColor(visible ? 'bg-primary-dark' : 'bg-transparent'),
@@ -53,7 +53,7 @@ export default function ({
   logoText,
   account,
   needNetworkChange,
-  getENSName,
+  eNSName,
   hideWalletPart,
   noWalletText,
 }: {
@@ -61,7 +61,7 @@ export default function ({
   logoText: VNode | string
   account?: string
   needNetworkChange: boolean
-  getENSName: (address: string) => string | undefined
+  eNSName?: string
   hideWalletPart?: boolean
   noWalletText?: string
 }) {
@@ -90,7 +90,7 @@ export default function ({
       </>
       {!hideWalletPart && (
         <RightBlock
-          getENSName={getENSName}
+          eNSName={eNSName}
           needNetworkChange={needNetworkChange}
           account={account}
           noWalletText={noWalletText}

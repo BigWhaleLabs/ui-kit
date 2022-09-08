@@ -5,12 +5,12 @@ import Network from '@/models/Network'
 export default function ({
   account,
   needNetworkChange,
-  getENSName,
+  eNSName,
   noWalletText = 'No wallet',
 }: {
   account?: string
   needNetworkChange: boolean
-  getENSName: (address: string) => string | undefined
+  eNSName?: string
   noWalletText?: string
 }) {
   const NotConnected = () =>
@@ -29,7 +29,7 @@ export default function ({
         <ENSAddress
           address={account}
           network={Network.Goerli}
-          getENSName={getENSName}
+          eNSName={eNSName}
         />
       ) : (
         <NotConnected />

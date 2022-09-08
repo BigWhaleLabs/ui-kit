@@ -15,7 +15,7 @@ import classnames, {
   width,
   wordBreak,
   zIndex,
-} from 'classnames/tailwind'
+} from '@/classnames/tailwind'
 
 const container = (closed: boolean, fitToItemSize?: boolean) =>
   classnames(

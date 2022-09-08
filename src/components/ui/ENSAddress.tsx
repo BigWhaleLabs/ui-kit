@@ -1,5 +1,5 @@
 import { Suspense, memo } from 'react'
-import { display } from 'classnames/tailwind'
+import { display } from '@/classnames/tailwind'
 import { displayFrom, displayTo } from '@/helpers/visibilityClassnames'
 import Network from '@/models/Network'
 import truncateMiddleIfNeeded from '@/helpers/network/truncateMiddleIfNeeded'
@@ -7,25 +7,23 @@ import truncateMiddleIfNeeded from '@/helpers/network/truncateMiddleIfNeeded'
 interface ENSAddressProps {
   address: string
   network: Network
-  getENSName: (address: string) => string | undefined
+  eNSName?: string
 }
 
 function ENSAddressSuspended({
   address,
   truncate,
   truncateSize,
-  getENSName,
+  eNSName,
 }: ENSAddressProps & {
   truncate?: boolean
   truncateSize: number
 }) {
-  const ensName = getENSName(address)
-
   return (
     <>
       {truncate
-        ? truncateMiddleIfNeeded(ensName || address, truncateSize)
-        : ensName || truncateMiddleIfNeeded(address, truncateSize)}
+        ? truncateMiddleIfNeeded(eNSName || address, truncateSize)
+        : eNSName || truncateMiddleIfNeeded(address, truncateSize)}
     </>
   )
 }
@@ -34,7 +32,7 @@ function ENSAddress({
   address,
   network,
   truncateSize,
-  getENSName,
+  eNSName,
 }: ENSAddressProps & { truncateSize: number }) {
   return (
     <Suspense fallback={truncateMiddleIfNeeded(address, truncateSize)}>
@@ -43,14 +41,14 @@ function ENSAddress({
         address={address}
         network={network}
         truncateSize={truncateSize}
-        getENSName={getENSName}
+        eNSName={eNSName}
       />
     </Suspense>
   )
 }
 
 export default memo<ENSAddressProps & { truncateSize?: number }>(
-  ({ address, network, truncateSize, getENSName }) => {
+  ({ address, network, truncateSize, eNSName }) => {
     // Used for gradient link. It won't work if we wrap it with a span
     if (truncateSize)
       return (
@@ -58,7 +56,7 @@ export default memo<ENSAddressProps & { truncateSize?: number }>(
           address={address}
           network={network}
           truncateSize={truncateSize}
-          getENSName={getENSName}
+          eNSName={eNSName}
         />
       )
 
@@ -66,7 +64,7 @@ export default memo<ENSAddressProps & { truncateSize?: number }>(
       <>
         <span className={displayTo('md')}>
           <ENSAddress
-            getENSName={getENSName}
+            eNSName={eNSName}
             address={address}
             network={network}
             truncateSize={11}
@@ -74,7 +72,7 @@ export default memo<ENSAddressProps & { truncateSize?: number }>(
         </span>
         <span className={display(displayFrom('md'), 'lg:hidden')}>
           <ENSAddress
-            getENSName={getENSName}
+            eNSName={eNSName}
             address={address}
             network={network}
             truncateSize={17}
@@ -82,7 +80,7 @@ export default memo<ENSAddressProps & { truncateSize?: number }>(
         </span>
         <span className={displayFrom('lg')}>
           <ENSAddress
-            getENSName={getENSName}
+            eNSName={eNSName}
             address={address}
             network={network}
             truncateSize={25}

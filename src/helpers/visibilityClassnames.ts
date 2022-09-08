@@ -1,4 +1,4 @@
-import { display } from 'classnames/tailwind'
+import { display } from '@/classnames/tailwind'
 
 type Size = 'xs' | 'sm' | 'md' | 'lg'
 

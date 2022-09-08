@@ -1,6 +1,6 @@
 import Account from '@/components/navbar/Account'
 import Logo from '@/components/navbar/Logo'
-import classnames, { lineHeight, textAlign, width } from 'classnames/tailwind'
+import classnames, { lineHeight, textAlign, width } from '@/classnames/tailwind'
 
 const walletAccount = classnames(
   textAlign('text-right'),
@@ -11,20 +11,20 @@ export default function ({
   account,
   connected,
   needNetworkChange,
-  getENSName,
+  eNSName,
   noWalletText,
 }: {
   account?: string
   needNetworkChange: boolean
   connected: boolean
-  getENSName: (address: string) => undefined | string
+  eNSName?: string
   noWalletText?: string
 }) {
   return (
     <>
       <div className={walletAccount}>
         <Account
-          getENSName={getENSName}
+          eNSName={eNSName}
           account={account}
           needNetworkChange={needNetworkChange}
           noWalletText={noWalletText}

@@ -6,7 +6,7 @@ import classnames, {
   fill,
   stroke,
   strokeWidth,
-} from 'classnames/tailwind'
+} from '@/classnames/tailwind'
 
 const svgClasses = classnames(
   displayFrom('sm'),
