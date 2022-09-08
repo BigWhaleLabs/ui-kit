@@ -81,6 +81,7 @@ const AccountContainer = ({
         getENSName={getENSName}
         needNetworkChange={needNetworkChange}
         connected={false}
+        noWalletText={noWalletText}
       />
     </div>
   )
