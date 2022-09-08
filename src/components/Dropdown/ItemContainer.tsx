@@ -14,6 +14,7 @@ import classnames, {
   overflow,
   padding,
   transitionProperty,
+  width,
 } from '@/classnames/tailwind'
 
 export const boxStyles = classnames(
@@ -31,7 +32,8 @@ export const boxStyles = classnames(
   padding('p-3'),
   maxHeight('max-h-64'),
   overflow('overflow-y-auto'),
-  alignItems('items-start')
+  alignItems('items-start'),
+  width('w-max')
 )
 
 export default function ({
