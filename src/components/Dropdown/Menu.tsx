@@ -5,7 +5,6 @@ import classnames, {
   borderRadius,
   cursor,
   inset,
-  minWidth,
   opacity,
   padding,
   position,
